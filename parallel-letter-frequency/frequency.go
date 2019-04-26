@@ -37,8 +37,5 @@ func ConcurrentFrequency(s []string) FreqMap {
 	for i := 0; i < len(s); i++ {
 		<-done
 	}
-	lock.Lock()
-	// fmt.Printf("%v", m)
-	lock.Unlock()
 	return m
 }
